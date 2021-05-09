@@ -1,21 +1,33 @@
 from SalarioLiquido import calcularsalarioliquido
-def calculardecimoterceiro ():
 
-    try:
+def calculardecimoterceiro (salarioBruto, mesesTrabalhados):
 
-        salarioliquido = (calcularsalarioliquido())
-        mesestrabalhados = int(input('Digite aqui a quantidade de meses trabalhado:'))
 
-        if mesestrabalhados >12:
-            print ('\nO tempo trabalhado deve ser entre os 12 meses!')
-        elif mesestrabalhados <1:
-            print ('\nO tempo trabalhado deve ser entre os 12 meses!')
+    decimoterceiro = (mesesTrabalhados * (salarioBruto / 12))
+    salarioliquido = (calcularsalarioliquido(decimoterceiro))
+
+    return (salarioliquido)
+
+def calculaEprintaDecimoTerceiro():
+    salarioBruto = float(input("Digite o salario bruto: "))
+
+    if (salarioBruto >= 1100):
+
+        mesesTrabalhados = float(input("Digite a quantidade de meses trabalhado:"))
+
+        if(mesesTrabalhados < 1 or mesesTrabalhados > 12):
+
+            print("O Décimo Terceiro requere no mínimo um mês trabalhado, e no máximo 12")
+            calculaEprintaDecimoTerceiro()
+
         else:
-            decimoterceiro = (mesestrabalhados * (salarioliquido / 12))
-            print (f'\nO décimo terceiro bruto é R${decimoterceiro:.2f}')
+            print(f"\n--- O valor do décimo terceiro salário liquido é: "
+                  f"R${calculardecimoterceiro(salarioBruto, mesesTrabalhados):.2f} ---\n")
 
-    except (ValueError):
-        print('O valor deve ser numérico!')
-        calculardecimoterceiro()
+
+    else:
+        print("O salário minimo é R$1100,00")
+        calculaEprintaDecimoTerceiro()
+
 
 

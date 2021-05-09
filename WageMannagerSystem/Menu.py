@@ -1,6 +1,6 @@
-from SalarioLiquido import calcularsalarioliquido
-from FeriasLiquido import feriasLiquido
-from DecimoTerceiro import calculardecimoterceiro
+from SalarioLiquido import calculaPrintaSalarioLiquido
+from FeriasLiquido import calculaEprintaFeriasLiquido
+from DecimoTerceiro import calculaEprintaDecimoTerceiro
 
 def menu():
     cont = 10
@@ -15,23 +15,24 @@ def menu():
 
             resp = int(input())
 
+
             if resp != 1 and resp != 0 and resp != 2 and resp!= 3:
-                print("Digite uma posição correta!")
-                menu()
+                print("Selecione uma opção valida")
+
 
             elif resp == 1:
-                   dec = calcularsalarioliquido()
-                   print(f"\n--- O valor do salario liquido é: R${dec:.2f}---\n")
+                   calculaPrintaSalarioLiquido()
 
             elif resp == 2:
-                    feriasLiquido()
+                calculaEprintaFeriasLiquido()
 
             elif resp == 3:
-                calculardecimoterceiro()
+                calculaEprintaDecimoTerceiro()
 
             elif resp == 0:
                 break
 
         except ValueError:
-            print("Apenas numeros")
-            menu()
+            print("Apenas números são validos")
+
+
