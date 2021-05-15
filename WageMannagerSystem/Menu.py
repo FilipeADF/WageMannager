@@ -21,7 +21,7 @@ def menu():
 
 
             elif resp == 1:
-                   calculaPrintaSalarioLiquido()
+                calculaPrintaSalarioLiquido()
 
             elif resp == 2:
                 calculaEprintaFeriasLiquido()
