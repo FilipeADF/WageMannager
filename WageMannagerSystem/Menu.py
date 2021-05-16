@@ -12,6 +12,7 @@ def menu():
             print("[2] - Calculo de Férias Liquido\n")
             print("[3] - Calculo de Décimo Terceiro Liquido\n")
             print("[0] - Sair do Programa\n")
+            print("----------------------\n")
 
             resp = int(input())
 
