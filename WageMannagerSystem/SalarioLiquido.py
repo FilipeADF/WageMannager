@@ -1,12 +1,12 @@
 def faixa1():
-    descontoINSS = (0.075 * 1100.0)
-    return descontoINSS
+    desconto = (0.075 * 1100.0)
+    return desconto
 def faixa2():
-    descontoINSS = (0.09 * 1103.60)
-    return descontoINSS
+    desconto = (0.09 * 1103.60)
+    return desconto
 def faixa3():
-    descontoINSS = (0.12 * 1101.80)
-    return descontoINSS
+    desconto = (0.12 * 1101.80)
+    return desconto
 
 
 def calcularsalarioliquido(salarioBruto):
