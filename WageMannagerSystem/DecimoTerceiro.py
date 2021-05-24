@@ -4,7 +4,7 @@ from SalarioLiquido import calcularDescontos
 def calculardecimoterceiro (salarioBruto, mesesTrabalhados):
 
     primeiraParcela = (mesesTrabalhados * (salarioBruto / 12)) / 2
-    totDescontos = calcularDescontos(salarioBruto)
+    totDesc = calcularDescontos(salarioBruto)
     INSS, IRRF = totDescontos
     segundaParcela =  primeiraParcela  - (INSS + IRRF)
     tot = primeiraParcela + segundaParcela
